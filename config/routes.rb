@@ -1,4 +1,10 @@
 Redpencil::Application.routes.draw do
+  resources :categories
+
+
+  resources :deals
+
+
   authenticated :user do
     root :to => 'home#index'
   end
