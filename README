@@ -1,0 +1,5 @@
+Prototype application for registering and searching database of deals in various categories.
+
+Built in Rails 3.2 using Rail composer template: 
+
+https://github.com/RailsApps/rails3-application-templates/blob/master/README 
