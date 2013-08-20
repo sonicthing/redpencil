@@ -10,7 +10,7 @@ class Ability
     unless user.new_record?
         can :create, Deal
         can :update, Deal, :user_id => user.id
-        can :destroy, Deal,:user_id => user.id
+        can :destroy,Deal,:user_id => user.id
     end    
     # Define abilities for the passed in user here. For example:
     #
