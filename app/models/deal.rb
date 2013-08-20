@@ -1,7 +1,7 @@
 class Deal < ActiveRecord::Base
-  attr_accessible :body, :title, :user_id
+  attr_accessible :body, :title, :category_ids
   validates_presence_of :title, :body, :user_id
   belongs_to :user
-  has_one :category
+  has_many :categories
 
 end

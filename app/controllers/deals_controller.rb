@@ -1,4 +1,6 @@
 class DealsController < ApplicationController
+  # stop creating deals if user not logged in but allow viewing of deals
+  # before_filter :authenticate_user!, :except => :index
   # GET /deals
   # GET /deals.json
   def index
@@ -41,6 +43,7 @@ class DealsController < ApplicationController
   # POST /deals.json
   def create
     @deal = Deal.new(params[:deal])
+    @deal.user_id = current_user.id
 
     respond_to do |format|
       if @deal.save
